@@ -1,0 +1,223 @@
+/**
+ * Body CSS
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: #edf0f0;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+input,
+textarea,
+buttons {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+/**
+ * Layout CSS
+ */
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    transition: left 1.2s;
+}
+
+.mui-appbar {
+    background-color: #1a2942;
+}
+
+#sidedrawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    left: -200px;
+    overflow: auto;
+    z-index: 2;
+    background-color: #1a2942;
+    color: #b4b6bd;
+    font-size: 15px;
+    transition: transform 1.2s;
+}
+
+#content-wrapper {
+    min-height: 100%;
+    overflow-x: hidden;
+    margin-left: 0px;
+    transition: margin-left 1.2s;
+    /* sticky bottom */
+    box-sizing: border-box;
+    margin-bottom: -160px;
+    padding-bottom: 160px;
+}
+
+#footer {
+    box-sizing: border-box;
+    height: 160px;
+    margin-left: 0px;
+    transition: margin-left 1.2s;
+    background-color: #fff;
+    border-bottom: 1px solid #ececee;
+}
+
+@media (min-width: 768px) {
+    #header {
+        left: 200px;
+    }
+    #sidedrawer {
+        transform: translate(200px);
+    }
+    #content-wrapper {
+        margin-left: 200px;
+    }
+    #footer {
+        margin-left: 200px;
+    }
+    body.hide-sidedrawer #header {
+        left: 0;
+    }
+    body.hide-sidedrawer #sidedrawer {
+        transform: translate(0px);
+    }
+    body.hide-sidedrawer #content-wrapper {
+        margin-left: 0;
+    }
+    body.hide-sidedrawer #footer {
+        margin-left: 0;
+    }
+}
+
+
+/**
+ * Toggle Sidedrawer
+ */
+
+#sidedrawer.active {
+    transform: translate(200px);
+}
+
+
+/**
+ * Header CSS
+ */
+
+.sidedrawer-toggle {
+    color: #E0E0E0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 70px;
+}
+
+.sidedrawer-toggle:hover,
+.nav-icons:hover {
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+.nav-icons {
+    line-height: 2.5!important;
+    font-size: 20px;
+    color: #E0E0E0;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+/**
+ * Sidedrawer CSS
+ */
+
+#sidedrawer-brand {
+    padding-left: 20px;
+}
+
+#sidedrawer ul {
+    list-style: none;
+}
+
+#sidedrawer>ul {
+    padding-left: 0px;
+}
+
+#sidedrawer>ul>li:first-child {
+    padding-top: 15px;
+}
+
+#sidedrawer strong {
+    display: block;
+    padding: 15px 22px;
+    cursor: pointer;
+}
+
+#sidedrawer strong:hover {
+    background-color: #1a2942;
+}
+
+#sidedrawer strong+ul>li {
+    padding: 6px 0px;
+}
+
+
+/*set width to side bar*/
+
+.main-content {
+    background: #E0E0E0;
+    position: absolute;
+    height: 90%;
+    padding: 5px;
+}
+
+
+/*set width to sidebar*/
+
+@media only screen and (max-width: 1100px) and (min-width: 100px) {
+    .set-fullWidthDiv {
+        transition: all 1.2s ease;
+        width: 100% !important;
+    }
+    .set-calculatedWidthDiv {
+        width: 100% !important;
+        transition: all 1.2s ease;
+        /* our nice transition */
+    }
+}
+
+@media only screen and (min-width: 1101px) {
+    .set-fullWidthDiv {
+        transition: all 1.2s ease;
+        width: 100% !important;
+    }
+    .set-calculatedWidthDiv {
+        width: 85.3% !important;
+        transition: all 1.2s ease;
+        /* our nice transition */
+    }
+}
+
+
+/**
+ * Footer CSS
+ */
+
+
+/* #footer {
+    background: #EEEEEE;
+}
+
+#footer a {
+    color: #EEEEEE;
+    text-decoration: underline;
+} */
