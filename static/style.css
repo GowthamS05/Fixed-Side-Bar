@@ -125,6 +125,7 @@ buttons {
     overflow: auto;
     z-index: 2;
     color: #2F353F;
+    background: white!important;
     font-size: 15px;
     transition: transform 1.2s;
 }
