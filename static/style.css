@@ -2,13 +2,15 @@
  * Body CSS
  */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+/* @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700); */
+
 html,
 body {
     height: 100%;
     background-color: #edf0f0;
     font-size: 14px;
-    font-family: 'Roboto', Verdana, Geneva, sans-serif!important;
+    font-family: Verdana, Geneva, sans-serif!important;
     overflow: auto;
 }
 
