@@ -8,6 +8,7 @@
 html,
 body {
     height: 100%;
+    background-color: #edf0f0;
     font-size: 14px;
     font-family: Verdana, Geneva, sans-serif!important;
     overflow: auto;
@@ -127,7 +128,6 @@ buttons {
     left: -200px;
     overflow: auto;
     z-index: 2;
-    background-color: #FFFF;
     color: #2F353F;
     font-size: 15px;
     transition: transform 1.2s;
@@ -441,9 +441,6 @@ li {
     }
     .messageMenuPosition {
         margin: 35% 0 0 -330%!important
-    }
-    #sidedrawer {
-        background-color: #FFFF!important;
     }
 }
 
