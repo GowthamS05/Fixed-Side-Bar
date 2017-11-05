@@ -8,7 +8,6 @@
 html,
 body {
     height: 100%;
-    background-color: #edf0f0;
     font-size: 14px;
     font-family: Verdana, Geneva, sans-serif!important;
     overflow: auto;
@@ -80,9 +79,6 @@ buttons {
     .messageMenuPosition {
         margin: 35% 0 0 -330%!important
     }
-    #sidedrawer {
-        background-color: #FFFF!important;
-    }
 }
 
 @media only screen and (min-width: 751px) {
@@ -149,7 +145,6 @@ buttons {
     height: 160px;
     margin-left: 0px;
     transition: margin-left 1.2s;
-    background-color: #fff;
     border-bottom: 1px solid #ececee;
 }
 
