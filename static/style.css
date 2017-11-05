@@ -75,7 +75,7 @@ buttons {
         margin: 20% 0 0 -330%!important;
     }
     .alertmenuposition {
-        margin: 30% 0 0 -500% !important;
+        margin: 30% 0 0 -330% !important;
     }
     .messageMenuPosition {
         margin: 35% 0 0 -330%!important
@@ -96,12 +96,6 @@ buttons {
     }
     .menuposition {
         margin: 0 0 0 -25%!important;
-    }
-    .messageMenuPosition {
-        margin: 0 0 0 -500% !important;
-    }
-    .alertmenuposition {
-        margin: 0 0 0 -500% !important;
     }
 }
 
