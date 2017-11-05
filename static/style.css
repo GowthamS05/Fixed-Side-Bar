@@ -2,12 +2,45 @@
  * Body CSS
  */
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 html,
 body {
     height: 100%;
     background-color: #edf0f0;
     font-size: 14px;
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto'!important;
+    overflow: auto;
+}
+
+
+/*Scroll bar color**/
+
+div#sidedrawer {
+    overflow: hidden!important;
+}
+
+
+/* Let's get this party started */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+/* Track */
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+body::-webkit-scrollbar-thumb {
+    background: #2f353f;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 html,
@@ -18,6 +51,56 @@ buttons {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+/*set width to sidebar*/
+
+@media only screen and (max-width: 750px) and (min-width: 100px) {
+    .set-fullWidthDiv {
+        transition: all 1.2s ease;
+        width: auto !important;
+    }
+    .set-calculatedWidthDiv {
+        width: auto !important;
+        transition: all 1.2s ease;
+        /* our nice transition */
+    }
+    .sidedrawer-toggle {
+        margin-right: auto;
+    }
+    .menuposition {
+        margin: 20% 0 0 -330%!important;
+    }
+    .alertmenuposition {
+        margin: 30% 0 0 -500% !important;
+    }
+    .messageMenuPosition {
+        margin: 35% 0 0 -330%!important
+    }
+}
+
+@media only screen and (min-width: 751px) {
+    .set-fullWidthDiv {
+        width: auto !important;
+    }
+    .set-calculatedWidthDiv {
+        width: auto !important;
+        transition: all 1.2s ease;
+        /* our nice transition */
+    }
+    .sidedrawer-toggle {
+        margin-right: auto;
+    }
+    .menuposition {
+        margin: 0 0 0 -25%!important;
+    }
+    .messageMenuPosition {
+        margin: 0 0 0 -500% !important;
+    }
+    .alertmenuposition {
+        margin: 0 0 0 -500% !important;
+    }
 }
 
 
@@ -35,7 +118,7 @@ buttons {
 }
 
 .mui-appbar {
-    background-color: #1a2942;
+    background-color: #2f353f;
 }
 
 #sidedrawer {
@@ -46,8 +129,8 @@ buttons {
     left: -200px;
     overflow: auto;
     z-index: 2;
-    background-color: #1a2942;
-    color: #b4b6bd;
+    background-color: #FFFF;
+    color: #2F353F;
     font-size: 15px;
     transition: transform 1.2s;
 }
@@ -150,6 +233,30 @@ buttons {
 
 #sidedrawer>ul {
     padding-left: 0px;
+    height: 100%;
+    overflow: auto;
+}
+
+#sidedrawer>ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+#sidedrawer>ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+#sidedrawer>ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #E6EBEC;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 #sidedrawer>ul>li:first-child {
@@ -160,10 +267,18 @@ buttons {
     display: block;
     padding: 15px 22px;
     cursor: pointer;
+    color: #838F9A;
 }
 
-#sidedrawer strong:hover {
-    background-color: #1a2942;
+#sidedrawer strong:hover,
+#sidedrawer strong:active,
+#sidedrawer strong:visited {
+    color: #2F353F;
+    background: #E6EBEC!important;
+}
+
+#sidedrawer strong+ul>li>a {
+    color: #838F9A;
 }
 
 #sidedrawer strong+ul>li {
@@ -177,34 +292,7 @@ buttons {
     position: absolute;
     height: 90%;
     padding: 5px;
-    overflow: auto;
-}
-
-
-/*set width to sidebar*/
-
-@media only screen and (max-width: 1100px) and (min-width: 100px) {
-    .set-fullWidthDiv {
-        transition: all 1.2s ease;
-        width: auto !important;
-    }
-    .set-calculatedWidthDiv {
-        width: auto !important;
-        transition: all 1.2s ease;
-        /* our nice transition */
-    }
-}
-
-@media only screen and (min-width: 1101px) {
-    .set-fullWidthDiv {
-        width: auto !important;
-        width: 100% !important;
-    }
-    .set-calculatedWidthDiv {
-        width: auto !important;
-        transition: all 1.2s ease;
-        /* our nice transition */
-    }
+    overflow: no-scroll;
 }
 
 
@@ -221,3 +309,115 @@ buttons {
     color: #EEEEEE;
     text-decoration: underline;
 } */
+
+
+/**form**/
+
+.app-search {
+    border: none;
+    font-size: 13px;
+    color: inherit;
+    padding-left: 20px;
+    background: rgba(237, 241, 242, 0.15);
+    box-shadow: none;
+    border-radius: 34px;
+    margin-top: 1px;
+    width: 12%;
+    display: inline;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.dropdown {
+    margin-left: 2%;
+}
+
+.spacing {
+    margin-left: 10px;
+}
+
+.headerFont {
+    color: #C3C9CE
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    text-decoration: none;
+}
+
+li>a:hover,
+span>a:hover {
+    text-decoration: none;
+    color: inherit!important;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+#sidedrawer-brand {
+    background-color: #2f353f;
+    color: #ffffff;
+}
+
+.mui-divider>ul>li>strong:hover {
+    color: none;
+}
+
+.thumb-sm {
+    height: 32px;
+    width: 32px;
+}
+
+.profileFont {
+    font-size: 14px;
+    color: rgb(121, 121, 121);
+}
+
+.font-medium {
+    font-size: medium!important;
+}
+
+.nomargin {
+    margin: 0px;
+}
+
+.marginRightDesktop {
+    margin-right: 20px;
+}
+
+li {
+    list-style: none!important
+}
+
+.menuposition>li,
+.alertmenuposition>li,
+.messageMenuPosition>li {
+    padding: 5px;
+}
+
+.badge.up {
+    position: relative;
+    top: -10px;
+    padding: 3px 6px;
+    margin-left: -10px;
+}
+
+.bg-purple {
+    background-color: #7d4bc5 !important;
+}
+
+.bg-pink {
+    background-color: #fc5d93!important;
+}
